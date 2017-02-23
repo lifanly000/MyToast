@@ -25,7 +25,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	compile 'com.github.lifanly000:toasty:1.0'
+	compile 'com.github.lifanly000:MyToast:1.0'
 }
 ```
 
