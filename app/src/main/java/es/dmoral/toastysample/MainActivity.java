@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toasty.error(MainActivity.this, "This is an error toast.", Toast.LENGTH_SHORT, true, Gravity.CENTER,Toasty.TOASTY_VERTICAL).show();
+//                Toasty.error(MainActivity.this, "This is an error toast.", Toast.LENGTH_SHORT, true, Gravity.CENTER).show();
             }
         });
         findViewById(R.id.button_success_toast).setOnClickListener(new View.OnClickListener() {
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Drawable icon = getResources().getDrawable(R.drawable.ic_pets_white_48dp);
                 Toasty.normal(MainActivity.this, "Normal toast w/ icon", Toast.LENGTH_LONG,icon,true,Gravity.CENTER,Toasty.TOASTY_VERTICAL).show();
+//                Toasty.normal(MainActivity.this, "Normal toast w/ icon", Toast.LENGTH_LONG,icon,true,Gravity.CENTER).show();
             }
         });
     }

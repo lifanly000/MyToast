@@ -72,6 +72,11 @@ public class Toasty {
     }
 
     public static @CheckResult Toast normal(@NonNull Context context, @NonNull String message, int duration,
+                                            Drawable icon, boolean withIcon,int gravity) {
+        return custom(context, message, icon, DEFAULT_TEXT_COLOR, duration, withIcon,gravity,TOASTY_HORIZONTAL);
+    }
+
+    public static @CheckResult Toast normal(@NonNull Context context, @NonNull String message, int duration,
                                Drawable icon, boolean withIcon,int gravity,int horizonMode) {
         return custom(context, message, icon, DEFAULT_TEXT_COLOR, duration, withIcon,gravity,horizonMode);
     }
@@ -87,6 +92,11 @@ public class Toasty {
     public static @CheckResult Toast warning(@NonNull Context context, @NonNull String message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_error_outline_white_48dp),
                 DEFAULT_TEXT_COLOR, WARNING_COLOR, duration, withIcon, true,-1,TOASTY_HORIZONTAL);
+    }
+
+    public static @CheckResult Toast warning(@NonNull Context context, @NonNull String message, int duration, boolean withIcon,int gravity) {
+        return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_error_outline_white_48dp),
+                DEFAULT_TEXT_COLOR, WARNING_COLOR, duration, withIcon, true,gravity,TOASTY_HORIZONTAL);
     }
 
     public static @CheckResult Toast warning(@NonNull Context context, @NonNull String message, int duration, boolean withIcon,int gravity,int horizonMode) {
@@ -107,6 +117,11 @@ public class Toasty {
                 DEFAULT_TEXT_COLOR, INFO_COLOR, duration, withIcon, true,-1,TOASTY_HORIZONTAL);
     }
 
+    public static @CheckResult Toast info(@NonNull Context context, @NonNull String message, int duration, boolean withIcon,int gravity) {
+        return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_info_outline_white_48dp),
+                DEFAULT_TEXT_COLOR, INFO_COLOR, duration, withIcon, true,gravity,TOASTY_HORIZONTAL);
+    }
+
     public static @CheckResult Toast info(@NonNull Context context, @NonNull String message, int duration, boolean withIcon,int gravity,int horizonMode) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_info_outline_white_48dp),
                 DEFAULT_TEXT_COLOR, INFO_COLOR, duration, withIcon, true,gravity,horizonMode);
@@ -125,6 +140,11 @@ public class Toasty {
                 DEFAULT_TEXT_COLOR, SUCCESS_COLOR, duration, withIcon, true,-1,TOASTY_HORIZONTAL);
     }
 
+    public static @CheckResult Toast success(@NonNull Context context, @NonNull String message, int duration, boolean withIcon,int gravity) {
+        return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_check_white_48dp),
+                DEFAULT_TEXT_COLOR, SUCCESS_COLOR, duration, withIcon, true,gravity,TOASTY_HORIZONTAL);
+    }
+
     public static @CheckResult Toast success(@NonNull Context context, @NonNull String message, int duration, boolean withIcon,int gravity,int horizonMode) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_check_white_48dp),
                 DEFAULT_TEXT_COLOR, SUCCESS_COLOR, duration, withIcon, true,gravity,horizonMode);
@@ -141,6 +161,11 @@ public class Toasty {
     public static @CheckResult Toast error(@NonNull Context context, @NonNull String message, int duration, boolean withIcon) {
         return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_clear_white_48dp),
                 DEFAULT_TEXT_COLOR, ERROR_COLOR, duration, withIcon, true,-1,TOASTY_HORIZONTAL);
+    }
+
+    public static @CheckResult Toast error(@NonNull Context context, @NonNull String message, int duration, boolean withIcon,int gravity) {
+        return custom(context, message, ToastyUtils.getDrawable(context, R.drawable.ic_clear_white_48dp),
+                DEFAULT_TEXT_COLOR, ERROR_COLOR, duration, withIcon, true,gravity,TOASTY_HORIZONTAL);
     }
 
     public static @CheckResult Toast error(@NonNull Context context, @NonNull String message, int duration, boolean withIcon,int gravity,int horizonMode) {
