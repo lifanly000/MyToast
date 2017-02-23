@@ -128,7 +128,9 @@ Screenshots
 --
 
 <img src="/art/scr1.png" width="250">
+
 <img src="/art/scr2.png" width="250">
+
 <img src="/art/scr3.png" width="250">
 <img src="/art/scr4.png" width="250">
 <img src="/art/scr5.png" width="250">
